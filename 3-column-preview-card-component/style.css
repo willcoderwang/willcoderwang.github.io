@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    background-color: var(--very-light-gray);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card {
+    padding: 2rem;
+}
+
+.card img {
+    padding-bottom: 1rem;
+}
+
+.card h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--very-light-gray);
+    font-family: 'Big Shoulders Display', cursive;
+    padding-bottom: 1rem;
+}
+
+.card p {
+    color: var(--transparent-white);
+    margin-bottom: 3rem;
+}
+
+.card a {
+    text-decoration: none;
+    width: 70%;
+    background-color: var(--very-light-gray);
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid var(--very-light-gray);
+}
+
+.card1 {
+    background-color: var(--bright-orange);
+}
+
+.card1 a {
+    color: var(--bright-orange);
+}
+
+.card1 a:hover {
+    color: var(--very-light-gray);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.card2 {
+    background-color: var(--dark-cyan);
+}
+
+.card2 a {
+    color: var(--dark-cyan);
+}
+
+.card2 a:hover {
+    color: var(--very-light-gray);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.card3 {
+    background-color: var(--very-dark-cyan);
+}
+
+.card3 a {
+    color: var(--very-dark-cyan);
+}
+
+.card3 a:hover {
+    color: var(--very-light-gray);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        height: 100%;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        max-width: 250px;
+        margin: 3rem auto;
+    }
+}
