@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --font-size: 14px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: var(--font-size);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background: var(--white);
+    height: 450px;
+    width: 600px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 2rem;
+}
+
+.card .header {
+    text-transform: uppercase;
+    color: var(--dark-grayish-blue);
+    letter-spacing: 0.3rem;
+    margin-top: 1.5rem;
+}
+
+.card .title {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.card .description {
+    color: var(--dark-grayish-blue);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price .new-price {
+    color: var(--dark-cyan);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.price .old-price {
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+    margin-right: 2rem;
+}
+
+.add-to-cart {
+    background: var(--dark-cyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.add-to-cart img {
+    display: inline;
+    margin-right: 1rem;
+}
+
+.add-to-cart p {
+    color: white;
+}
+
+.add-to-cart:hover {
+    background: var(--very-dark-blue);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 610px) {
+    .container {
+        height: auto;
+    }
+
+    .main {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        margin-bottom: 1rem;
+    }
+
+    .main > img {
+        height: 290px;
+        object-fit: cover;
+    }
+
+    .card .title {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .price {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+}
